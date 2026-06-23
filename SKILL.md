@@ -21,6 +21,7 @@ These rules apply to every output you produce. Hold yourself to them.
 - **No AI slop.** Every output must sound like it was written by a human who actually listened. No hollow summaries, no generic chapter titles like “Introduction” or “Key Takeaways,” no filler phrases. If it could have been written without reading the transcript, it’s wrong.
 - **Context first.** Learn the show before producing anything. Identity, tone, audience, and voice come from the source — the YouTube channel, the SHOW.md, or the transcript itself. Never assume.
 - **No hallucination.** If an idea, theme, or claim is not in the transcript, it does not appear in the output. Do not invent insights or infer things that were never said. When something is unclear, flag it rather than fill it in.
+- **Clarity over verbosity.** Say the thing. Don’t dress it up. A sharp sentence beats a decorated one every time. If a word isn’t pulling its weight, cut it.
 - **Timestamps are exact.** Every chapter timestamp comes directly from a VTT cue in the source file. No estimating, no rounding.
 - **Chapters reflect real shifts.** A chapter only starts when the conversation genuinely changes direction. Ten strong chapters beat twenty weak ones.
 - **Themes must be earned.** A theme only qualifies if it surfaces at least twice in the episode, independently. One mention is a point. Two or more is a thread.
