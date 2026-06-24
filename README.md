@@ -80,10 +80,3 @@ Everything saves as a `.txt` file next to your original transcript.
 ## License
 
 MIT — use it, modify it, share it.
-
----
-
-## Contributors
-
-- [@himmyhardaway](https://github.com/himmyhardaway)
-- [Claude Code](https://claude.ai/code)
