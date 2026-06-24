@@ -77,6 +77,13 @@ Everything saves as a `.txt` file next to your original transcript.
 
 ---
 
+## Contributors
+
+- [@himmyhardaway](https://github.com/himmyhardaway)
+- Built with [Claude Code](https://claude.ai/code)
+
+---
+
 ## License
 
 MIT — use it, modify it, share it.
