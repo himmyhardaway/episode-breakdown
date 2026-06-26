@@ -1,6 +1,8 @@
 # episode-breakdown
 
-A Claude Code skill for anyone making a show. Drop in a transcript, get back chapters for YouTube, key themes, and a summary written in the voice of your show — not a generic AI recap.
+A skill for anyone making a show. Drop in a transcript, get back chapters for YouTube, key themes, and a summary written in the voice of your show — not a generic AI recap.
+
+Works in **Claude Chat** (claude.ai) and **Claude Code** (CLI/desktop app).
 
 ---
 
@@ -14,17 +16,24 @@ Built for producers, editors, and creators who are moving fast and can't afford 
 
 ---
 
-## Requirements
+## How to Use It
 
-- [Claude Code](https://claude.ai/code) (desktop app or CLI)
-- A `.vtt` transcript file from your episode (most recording tools export these)
-- Optional: a YouTube channel URL or a filled-in `SHOW.md` to give the skill your show's identity upfront
+### Option 1 — Claude Chat (no setup required)
+
+1. Open [claude.ai](https://claude.ai)
+2. Start a new conversation
+3. Paste the contents of `SKILL.md` into the chat, followed by your transcript text
+4. Claude will produce chapters, themes, and a summary directly in the conversation — formatted for easy copying
+
+No install. No file paths. Just paste and go.
 
 ---
 
-## Install
+### Option 2 — Claude Code (CLI or desktop app)
 
-**1. Copy the skill file into your Claude commands folder.**
+Requires [Claude Code](https://claude.ai/code).
+
+**Install the skill:**
 
 Global install (available in every project):
 ```bash
@@ -36,9 +45,7 @@ Project install (available in one project only):
 cp SKILL.md .claude/commands/episode-breakdown.md
 ```
 
-**2. Optional: fill in `SHOW.md`** with your show's identity so the skill knows your voice before it reads a single word of the transcript. Or pass your YouTube channel URL and it will pull that automatically.
-
-**3. Run it from Claude Code:**
+**Run it:**
 ```
 /episode-breakdown /path/to/transcript.vtt
 ```
@@ -53,27 +60,38 @@ With a local show profile:
 /episode-breakdown /path/to/transcript.vtt SHOW.md
 ```
 
+Output saves automatically as a `.txt` file next to your original transcript.
+
 ---
 
-## How It Works
+## Optional: Give It Your Show's Identity Upfront
 
-The skill does four things in order:
+The skill will infer your show from the transcript — but you can give it a head start two ways:
 
-**1. Learns the show**
-If you pass a YouTube URL, it fetches your channel's about page and description to understand your show's identity, tone, and audience. If you pass a `SHOW.md`, it reads that. If you pass neither, it infers everything from the transcript itself.
+- **YouTube URL** — pass your channel URL and it fetches your show description, tone, and recent topics automatically
+- **SHOW.md** — fill in the included `SHOW.md` template with your show's identity and pass it as an argument (Claude Code) or paste it alongside your transcript (Claude Chat)
 
-**2. Chapters**
-Identifies 10–20 natural topic shifts and outputs timestamps in two ready-to-paste formats:
-- YouTube format: `00:00 Chapter Title`
-- Spotify / Podcast format: `(0:00) Chapter Title`
+---
 
-**3. Key Themes**
-4–6 ideas that run through the episode, each with a one-sentence description and timestamps for where they surface.
+## What It Produces
 
-**4. Episode Summary**
+**Chapters**
+10–20 natural topic shifts with timestamps in two ready-to-paste formats:
+- YouTube: `00:00 Chapter Title`
+- Spotify / Podcast: `(0:00) Chapter Title`
+
+**Key Themes**
+4–6 ideas that run through the episode, each with a one-sentence description and timestamps for where they surface. Only themes that appear at least twice make the cut.
+
+**Episode Summary**
 150–200 words written in the actual tone of your show. Analytical shows get sharp copy. Conversational shows get warmth. Investigative shows get tension. It reads like a human wrote it because it's shaped around who you are.
 
-Everything saves as a `.txt` file next to your original transcript.
+---
+
+## Requirements
+
+- A transcript file — `.vtt` format works best (most recording tools export these). In Claude Chat, paste the text directly.
+- Claude Chat (free or paid) or Claude Code (CLI/desktop)
 
 ---
 
